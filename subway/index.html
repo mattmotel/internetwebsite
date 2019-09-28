@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>They have a Subway here</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+
+    
+<style>
+
+  body{font-size:.7rem;}
+
+  .grid-item,.caption{float:left;}
+  .caption{background:#eee;padding:2rem;box-sizing: border-box;}
+  .clear{clear:both;padding:5rem 0;}
+
+  @media screen and (max-width: 600px) {
+    .caption{padding:.5rem;font-size:.5rem;}
+}
+
+</style>
+<div id="grid"></div>
+
+<script>
+
+
+
+  var photos = [
+  "IMG_4528",
+  "IMG_4982",
+  "IMG_6146",
+  "IMG_9707"
+];
+
+
+
+
+
+/**
+ * Randomly shuffle an array
+ * https://stackoverflow.com/a/2450976/1293256
+ * @param  {Array} array The array to shuffle
+ * @return {String}      The first item in the shuffled array
+ */
+var shuffle = function (array) {
+
+	var currentIndex = array.length;
+	var temporaryValue, randomIndex;
+
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+		// Pick a remaining element...
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+
+		// And swap it with the current element.
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
+	}
+
+	return array;
+
+};
+
+// Shuffle lunch
+shuffle(photos);
+
+var i;
+
+
+
+  for (i = 0; i < photos.length; i++) {
+
+
+    var random = Math.floor((Math.random() * 20) + 20);
+
+    var gridItem = '<div style="width:'
+        + (100-random) +
+        '%" id="'
+        + photos[i] +
+        '" class="grid-item"><img src="images/subway/'
+        + photos[i] +
+        '.jpeg"/></div></div>';
+
+        var caption = '<div class="caption" style="width:'
+        + random +
+        '%"><em>Figure 1.</em>'
+        +i+
+        '<br/>"Hey, they have a Subway here!"</div>';
+
+        var clear = '<div class="clear"></div>';
+
+
+var flip = Math.floor(Math.random() * 10);
+console.log(flip);
+
+if (flip >= 5){
+  $( "#grid").append( caption );
+  $( "#grid").append( gridItem );
+  $( "#grid").append( clear );
+}
+else{
+  $( "#grid").append( gridItem );
+  $( "#grid").append( caption );
+  $( "#grid").append( clear );
+}
+
+
+
+
+
+  }
+
+
+
+
+</script>
+
+  </body>
+</html>

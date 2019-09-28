@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>So sorry to inform you, have purchased an orange car.</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+
+    <style>
+
+body{
+  background:#fff;
+}
+  #grid{
+    max-width:500px;
+    margin:auto;
+  }
+
+  #grid img{width:100%}
+</style>
+
+
+
+  <div id="grid"></div>
+
+  <script>
+
+    var photos = [
+    "dotheyknow.png",
+    "IMG_1368.jpeg",
+
+    // keep this the first image
+
+    "IMG_6719.JPG",
+    "IMG_6725.JPG",
+    "IMG_9601.jpeg",
+    "IMG_1352.jpeg",
+    "IMG_9624.jpeg"
+
+  ];
+
+
+
+
+  var i;
+
+
+
+    for (i = 0; i < photos.length; i++) {
+
+
+
+
+      var gridItem = '<div id="'
+          + photos[i] +
+          '" class="grid-item"><img src="images/orange/'
+          + photos[i] +
+          '"/></div></div>';
+
+
+    $( "#grid").append( gridItem );
+
+
+
+
+
+
+    }
+
+
+
+
+  </script>
+
+  </body>
+</html>
