@@ -6,7 +6,9 @@ title: Nail in Wood Bottle Opener
 <style>
 
   @import url('https://fonts.googleapis.com/css?family=Chivo:300,400,400i,700,900&display=swap');
-
+#home{
+  font-size:1rem;
+}
 body{
   font-family:"Chivo",arial;
   text-align:left;
@@ -14,10 +16,13 @@ body{
     font-weight:100;
     line-height:1;
 
+    margin:20px 60px;
+
 background:#fff;
 color:#3f3f3f;}
 
-.st0{fill:#3f3f3f;}
+.st0{fill:#fff;}
+.st1{fill:#3f3f3f;}
 
 img{max-width:900px;
 width:100%;}
@@ -26,8 +31,8 @@ width:100%;}
   cursor:pointer;
   position:fixed;
   z-index:2;
-right:10px;
-bottom:10px;
+right:40px;
+bottom:40px;
 text-align:center;
 color:#fff;
 background:#3f3f3f;
@@ -73,6 +78,28 @@ font-weight:900;
   color:#3f3f3f;
 }
 
+
+.flash{
+animation:flashing .75s infinite;
+
+}
+
+@keyframes flashing {
+0% {
+  background:#fff;
+  color:#3f3f3f;
+}
+50% {
+  color:#fff;
+  background:#3f3f3f;
+}
+
+100% {
+  background:#fff;
+  color:#3f3f3f;
+}
+}
+
 h1{
   font-size:8rem;
   font-weight:900;
@@ -89,6 +116,47 @@ h1 span{
 .price{
   width:220px;position:absolute; z-index:1;bottom:10px;right:10px;
 }
+
+
+
+
+/* borders */
+#top, #bottom, #left, #right {
+  background: #3f3f3f;
+  position: fixed;
+  z-index:5;
+}
+
+#left, #right {
+  top: 0;
+  bottom: 0;
+  width: 10px;
+
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#top, #bottom {
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
+}
+
+
 @media screen and (max-width: 800px) {
   body{
 
@@ -110,6 +178,14 @@ h1{
 .buyit{
 
 padding:1rem;}
+
+#left, #right {
+    width: 15px;
+  }
+
+  #top, #bottom {
+    height: 15px;
+  }
 </style>
 
 
@@ -119,7 +195,10 @@ padding:1rem;}
     <span>you fucking idiot</span>
 </div>
 
-
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
 
 <h1>Nail in Wood <br><span>Bottle Opener</span></h1>
 
@@ -156,4 +235,13 @@ padding:1rem;}
 I made it. You buy it.<br/>
 It's a stupid fucking thing that you need to put in your stupid fucking house. Let's go!!!</p>
 
-<a class="buyit">Buy it! Buy it! Buy it!</a>
+<a class="buyit flash">Buy it! Buy it! Buy it!</a>
+
+<p>AHHHHHHHHH!!!!</p>
+
+<p>AHHHHHHHHHHHHHH!!!!</p>
+
+<p>AHHHHHHHHHHHHHHHHHHHHHH!!!!</p>
+
+
+<a class="buyit flash">AHHHHHH AHHHHHH AHHHHHHH!!!!</a>
