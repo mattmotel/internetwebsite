@@ -5,32 +5,106 @@ title: So sorry to inform you, have purchased an orange car.
 <style>
 
 body{
-  background:#fff;
+  background: linear-gradient(#fff, rgb(247,81,34,.25));
 }
   #grid{
     max-width:500px;
     margin:auto;
+    width:100%;
   }
 
-  #grid img{width:100%}
+  #grid img{width:100%;
+  border-radius:12px;
+  margin:30px 0px;}
+
+  .right,.left{
+    text-align:left;
+      padding:10px;
+      border-radius:12px;
+      display:block;
+      margin:10px 0px;
+      max-width:350px;
+  }
+  .right{
+  background: linear-gradient(rgb(247,81,34,.5), rgb(247,81,34,1));
+  color:#fff;
+  float:right;
+}
+
+.left{
+background:#e4e4ea;
+float:left;}
+
+.clear{clear:both;}
+
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 -10px #F75122; }
+  40% { box-shadow: 0 0 80px #F75122; }
+  60% { box-shadow: 0 0 80px #F75122; }
+  100% { box-shadow: 0 0 -10px #F75122; }
+}
+
+.glow {
+  animation: glowing 2500ms infinite;
+}
 
   .st0{fill:#F75122;}
 	.st1{fill:white;}
+
+
 </style>
 
 
 
-  <div id="grid"></div>
+  <div id="grid">
+
+    <div class="grid-item"><img src="/images/orange/IMG_6558.JPG"/></div>
+
+
+
+
+    <div class="clear"></div><p class="right">
+      Do you think they know they accidently got the orange kind?
+
+    </p>
+
+    <div class="clear"></div><p class="left">
+    I mean, they drive it on the inside, so there's no way for them to really know.
+    </p>
+
+    <div class="clear"></div><p class="left">
+    You should make a little card to stick under the wiper.<br/>
+    And always carry them around with you.
+    </p>
+
+    <div class="clear"></div><p class="right">
+    This is a good idea.
+    </p>
+
+    <div class="clear"></div><p class="right">
+    These poor people... they have no idea.
+    </p>
+
+
+<div class="grid-item"><img src="/images/orange/IMG_6719.JPG"/></div>
+
+<div class="clear"></div><p class="left">
+QUICK GIVE ME A CARD
+</p>
+
+<div class="grid-item"><img src="/images/orange/IMG_1368.jpeg" class="glow"/></div>
+
+
+
+
+
+  </div>
 
   <script>
 
     var photos = [
-    "dotheyknow.png",
-    "IMG_1368.jpeg",
 
-    // keep this the first image
-
-    "IMG_6719.JPG",
     "IMG_6725.JPG",
     "IMG_9601.jpeg",
     "IMG_1352.jpeg",
